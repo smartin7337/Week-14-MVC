@@ -1,8 +1,7 @@
 const { Router } = require("express");
+const views = require("./views");
 const router = Router();
 
-router.get("/", (req, res, next) => {
-  res.render("home");
-});
+router.use("/", views);
 
 module.exports = router;
